@@ -1,9 +1,38 @@
-#highscore {
-    color: red;
-    text-decoration: none;
-    font-size: 100px;
+html {
+    padding: 10px;
+    background-color: rgb(9, 51, 54) ;
 }
 
-h1 {
-    color: red;
+header {
+    text-align: center;
+    display: inline;
+}
+
+
+a {
+    color: rgb(139, 191, 196);
+    text-decoration: none;
+    font-size: 18px;
+    background-color: rgb(44, 44, 122);
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    vertical-align: center;
+    float: left;
+    border: solid rgb(57, 100, 156) 2px;
+    box-shadow: -4px 4px rgba(45, 45, 149, 0.904);
+}
+
+#timer {
+    border: solid rgb(57, 100, 156) 4px;
+    display: inline-block;
+    vertical-align: center;
+    float: right;
+    background-color:rgba(44, 44, 122, 0.904);
+
+    width: 60px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: -5px 2px rgb(37, 67, 107);
+
 }
