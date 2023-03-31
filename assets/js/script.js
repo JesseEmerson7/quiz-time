@@ -9,9 +9,9 @@ let questions = [
 },
 {
 
-    q:"",
-    answers:[],
-    a:""
+    q:"What does Document.querySelector() do?",
+    answers:["changes the document styling.","Shows the key code", "Selects a CSS selector","Starts a function"],
+    a:"Selects a CSS selector"
 },
 {
     q:"",
@@ -24,7 +24,7 @@ let questions = [
     answers:[],
     a:""
 
-},
+}
 
 
 ]
