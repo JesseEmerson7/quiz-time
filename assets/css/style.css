@@ -44,7 +44,7 @@ a {
 
 
 main {
-  margin-top: 18%;
+  margin-top: 5%;
   width: 100vw;
   height: 100vh;
   justify-content: center;
@@ -57,4 +57,20 @@ main {
 a:hover {
     border-width: 1px;
     box-shadow: -4px 4px rgba(41, 41, 137, 0.904);
+}
+
+#btn {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: -2px 2px rgb(255, 255, 255);
+
+}
+
+#btn:hover {
+    background-color: rgb(220, 223, 224);
+    box-shadow: -3px 2px rgb(37, 67, 107);
+    cursor: pointer;
+    
 }
