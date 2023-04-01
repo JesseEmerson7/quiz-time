@@ -4,26 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz Time!</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Quiz Time!</title>
   </head>
   <body>
     <header id="top-box">
       <div id="highscore"><a href="./highscore.html">View Highscores</a></div>
-      <div id="timer"><p>0</p></div>
+      <div id="timer"><p>Time</p></div>
     </header>
     <main id="main-content">
       <div id="question-div" class="hidden">
         <div id="question">This is Question 1</div>
-        <button class="selection" id="answer 1">answer 1</button>
-        <button class="selection" id="answer 2">answer 2</button>
-        <button class="selection" id="answer 3">answer 3</button>
-        <button class="selection" id="answer 4">answer 4</button>
+        <button class="selection" id="answer-1">answer 1</button>
+        <button class="selection" id="answer-2">answer 2</button>
+        <button class="selection" id="answer-3">answer 3</button>
+        <button class="selection" id="answer-4">answer 4</button>
         <div id="right-wrong" class="hidden">correct!</div>
       </div>
       <div id="start-quiz">
         <h1>Coding Quiz</h1>
         <p>Test your knowledge about JavaScript!</p>
+        <p>Each wrong question deducts 10 seconds off the time.</p>
+        <p>Try and set a highscore in best time!</p>
         <button type="button" id="start-btn">Start Quiz!</button>
       </div>
     </main>

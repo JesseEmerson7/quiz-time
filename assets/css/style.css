@@ -25,6 +25,7 @@ a {
     float: left;
     border: solid rgb(57, 100, 156) 2px;
     box-shadow: -4px 4px rgba(45, 45, 149, 0.904);
+    margin-left: 10px;
 }
 
 #timer {
@@ -40,6 +41,7 @@ a {
     justify-content: center;
     flex-direction: column;
     color: rgb(168, 189, 215);
+    margin-right: 45px;
 
 }
 
