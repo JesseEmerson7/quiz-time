@@ -9,7 +9,7 @@
   </head>
   <body>
     <header id="top-box">
-      <div id="highscore"><a href="./highscore.html">View Highscores</a></div>
+      <div id="highscore"><a href="./highscore.html">View High Scores</a></div>
       <div id="timer"><p>Time</p></div>
     </header>
     <main id="main-content">
@@ -25,8 +25,12 @@
         <h1>Coding Quiz</h1>
         <p>Test your knowledge about JavaScript!</p>
         <p>Each wrong question deducts 5 seconds off the time.</p>
-        <p>Try and set a highscore in best time!</p>
+        <p>Try and set a high score in best time!</p>
         <button type="button" id="start-btn">Start Quiz!</button>
+      </div>
+      <div id="initial-div" class="hidden">
+        <input type="text" placeholder="Enter initials here" id="initial-input">
+        <button id="initial-btn">Submit</button>
       </div>
     </main>
     <script src="assets/js/script.js"></script>
