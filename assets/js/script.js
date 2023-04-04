@@ -2,8 +2,6 @@ let qIndex = 0;
 
 let time = 40;
 
-let playerScore = 0;
-
 const questions = [
   {
     q: "What is the proper function syntax?",
@@ -24,11 +22,11 @@ const questions = [
     q: "How do you format an if statement?",
     answers: [
       "if then(){maybe}",
-      "if(){}then",
+      "if(){}",
       "then if (){}",
       "if we do this then{}",
     ],
-    a: "if(){}then",
+    a: "if(){}",
   },
   {
     q: "How would you stop event bubbling?",
@@ -68,13 +66,6 @@ const initialInput = document.getElementById('initial-input')
 const initialBtn = document.getElementById('initial-btn')
 
 let intervalId;
-
-startBtn.addEventListener("click", function () {
-//   startTimer();
-intervalId = setInterval(timerFunction, 1000);
-  startGame();
-});
-
 
 
 function startGame() {
@@ -173,3 +164,9 @@ initialBtn.addEventListener('click', function(){
     localStorage.setItem('highscores',JSON.stringify(highScoreList))
     window.location.href = "../highscore.html";
 })
+//start button for game and timer at an interval of 1 second count down
+startBtn.addEventListener("click", function () {
+  //   startTimer();
+  intervalId = setInterval(timerFunction, 1000);
+    startGame();
+  });

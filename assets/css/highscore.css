@@ -1,0 +1,68 @@
+html {
+    padding: 10px;
+    background-color: rgb(9, 51, 54) ;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+
+
+a {
+    color: rgb(139, 191, 196);
+    text-decoration: none;
+    font-size: 18px;
+    background-color: rgb(44, 44, 122);
+    padding: 10px;
+    border-radius: 20px;
+    border: solid rgb(57, 100, 156) 2px;
+    box-shadow: -4px 4px rgba(45, 45, 149, 0.904);
+    margin-left: 10px;
+}
+
+.hover:hover {
+    border-width: 1px;
+    box-shadow: -4px 4px rgba(41, 41, 137, 0.904);
+}
+
+
+main {
+    margin-top: 5%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: rgb(237, 225, 225);
+    font-size: 1.5rem;
+    display: block;
+  }
+
+  #high-score-title {
+    border-bottom: 2px solid rgb(125, 107, 9);
+    width: 50%;
+    margin: 50px auto;
+  }
+/* high score styling */
+  p {
+    color: aliceblue;
+    border: 2px solid rgb(142, 127, 42);
+    width: 25%;
+    text-align: center;
+    margin: 15px auto;
+    border-radius: 20px;
+    background-color: rgb(44, 44, 122);
+    
+  }
+
+  p:last-of-type {
+    border: 4px solid rgb(216, 189, 34);
+    height: 35px;
+  }
+
+  p:hover {
+    border: 2px solid rgb(216, 189, 34);
+  }
+  
