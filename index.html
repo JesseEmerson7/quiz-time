@@ -9,7 +9,9 @@
   </head>
   <body>
     <header id="top-box">
-      <div id="highscore"><a class="hover" href="./highscore.html">View High Scores</a></div>
+      <div id="highscore">
+        <a class="hover" href="./highscore.html">View High Scores</a>
+      </div>
       <div class="hidden" id="your-score"><p>Your Score! >>></p></div>
       <div id="timer"><p>Time</p></div>
     </header>
@@ -25,18 +27,35 @@
       <div id="start-quiz">
         <h1>Coding Quiz</h1>
         <p>Test your knowledge about JavaScript!</p>
-        <p>Each wrong question deducts 5 seconds off the time.</p>
+        <p>Each wrong question deducts 10 seconds off the time.</p>
         <p>Try and set a high score in best time!</p>
         <button type="button" id="start-btn">Start Quiz!</button>
       </div>
       <div id="initial-div" class="hidden">
         <h2>Nice job! Please enter your initials for the score list.</h2>
-        <input type="text" placeholder="Enter initials here" id="initial-input">
+        <input
+          type="text"
+          placeholder="Enter initials here"
+          id="initial-input"
+        />
         <button id="initial-btn">Submit</button>
       </div>
       <div class="hidden">
-        <audio id="audio-wrong" src="assets/audio/mixkit-arcade-retro-game-over-213.wav" type="wav"></audio>
-        <audio id="audio-right" src="assets/audio/mixkit-retro-game-notification-212.wav" type="wav"></audio>
+        <audio
+          id="audio-wrong"
+          src="assets/audio/mixkit-arcade-retro-game-over-213.wav"
+          type="wav"
+        ></audio>
+        <audio
+          id="audio-right"
+          src="assets/audio/mixkit-retro-game-notification-212.wav"
+          type="wav"
+        ></audio>
+        <audio
+          id="out-of-time"
+          src="assets/audio/Ooh you almost had it....mp3"
+          type="mp3"
+        ></audio>
       </div>
     </main>
     <script src="./assets/js/script.js"></script>

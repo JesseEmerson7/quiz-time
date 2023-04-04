@@ -79,6 +79,8 @@ const audioWrong = document.getElementById("audio-wrong");
 
 const audioRight = document.getElementById("audio-right");
 
+const audioOutOfTime = document.getElementById("out-of-time");
+
 const yourScore = document.getElementById("your-score");
 
 let intervalId;
@@ -136,6 +138,7 @@ function timerFunction() {
     timer.innerText = time--;
   } else if (time == 0) {
     endGame();
+    audioOutOfTime.play();
     clearInterval(intervalId);
   }
   timer.innerText = time;
@@ -177,7 +180,7 @@ initialBtn.addEventListener("click", function () {
   };
   highScoreList.push(playerInitial);
   localStorage.setItem("highscores", JSON.stringify(highScoreList));
-  window.location.href = "../highscore.html/";
+  window.location.href = "../highscore.html";
 });
 //start button for game and timer at an interval of 1 second count down
 startBtn.addEventListener("click", function () {

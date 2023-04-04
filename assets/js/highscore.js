@@ -4,8 +4,6 @@ const highScoreDiv = document.getElementById('high-score-div');
 
 let listArray = JSON.parse(localStorage.getItem("highscores"));
 
-
-
 let listItem = document.createElement('p');
 console.log(listItem);
 
