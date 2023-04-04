@@ -156,3 +156,9 @@ gap: 20px;
     box-shadow: -3px 3px rgba(46, 153, 235, 0.904)
 
 }
+
+#your-score {
+    color: white;
+    font-size: 25px;
+    margin-left: 445px;
+}

@@ -33,9 +33,19 @@ const questions = [
     answers: ["Tell it to stop", ".stopBubble", ".stopPropagation", ".stopNow"],
     a: ".stopPropagation",
   },
+  {
+    q: "How would you remove a class from an html element using JS?",
+    answers: [
+      ".addAClass",
+      "var.addClass('')",
+      "var.classList.add('')",
+      "This class here.()",
+    ],
+    a: "var.classList.add('')",
+  },
 ];
 
-const highScoreList =JSON.parse(localStorage.getItem("highscores")) || [];
+const highScoreList = JSON.parse(localStorage.getItem("highscores")) || [];
 
 const startBtn = document.getElementById("start-btn");
 
@@ -59,14 +69,19 @@ const timer = document.getElementById("timer");
 
 const mainContent = document.getElementById("main-content");
 
-const initialDiv = document.getElementById('initial-div')
+const initialDiv = document.getElementById("initial-div");
 
-const initialInput = document.getElementById('initial-input')
+const initialInput = document.getElementById("initial-input");
 
-const initialBtn = document.getElementById('initial-btn')
+const initialBtn = document.getElementById("initial-btn");
+
+const audioWrong = document.getElementById("audio-wrong");
+
+const audioRight = document.getElementById("audio-right");
+
+const yourScore = document.getElementById("your-score");
 
 let intervalId;
-
 
 function startGame() {
   startQuizDiv.classList.add("hidden");
@@ -95,6 +110,7 @@ questionDiv.addEventListener("click", function (e) {
     let correct = true;
     correctOrNot(correct);
     console.log(qIndex);
+    audioRight.play();
 
     //if wrong questions are changed and wrong! is put on screen and 5 seconds are deducted from time
   } else {
@@ -103,6 +119,7 @@ questionDiv.addEventListener("click", function (e) {
     console.log("whoops");
     correctOrNot(correct);
     console.log(qIndex);
+    audioWrong.play();
   }
   if (qIndex < questions.length - 1) {
     qIndex++;
@@ -112,7 +129,6 @@ questionDiv.addEventListener("click", function (e) {
   }
 });
 
-
 //Timer is set to got down by 1 every second and if the last question is answered time stops. or if time hits 0.
 
 function timerFunction() {
@@ -120,11 +136,10 @@ function timerFunction() {
     timer.innerText = time--;
   } else if (time == 0) {
     endGame();
-    clearInterval(intervalId)
+    clearInterval(intervalId);
   }
   timer.innerText = time;
-
-};
+}
 
 //This function sets the Correct or Wrong text under the questions
 
@@ -142,31 +157,31 @@ function correctOrNot(correct) {
       rightWrong.classList.add("hidden");
     }, 1000);
   }
-};
+}
 
 // stops timer and change the screen to an initials input.
 
 function endGame() {
-    clearInterval(intervalId);
-    questionDiv.classList.add("hidden");
-    initialDiv.classList.remove("hidden");
-  
-  };
+  clearInterval(intervalId);
+  questionDiv.classList.add("hidden");
+  initialDiv.classList.remove("hidden");
+  yourScore.classList.remove("hidden");
+}
 
 //once submit button is entered it is saved to local storage to be sent to the high score page.
 
-initialBtn.addEventListener('click', function(){
-    const playerInitial = {
-        initial: initialInput.value,
-        score: time
-    }
-    highScoreList.push(playerInitial)
-    localStorage.setItem('highscores',JSON.stringify(highScoreList))
-    window.location.href = "../highscore.html";
-})
+initialBtn.addEventListener("click", function () {
+  const playerInitial = {
+    initial: initialInput.value,
+    score: time,
+  };
+  highScoreList.push(playerInitial);
+  localStorage.setItem("highscores", JSON.stringify(highScoreList));
+  window.location.href = "../highscore.html/";
+});
 //start button for game and timer at an interval of 1 second count down
 startBtn.addEventListener("click", function () {
   //   startTimer();
   intervalId = setInterval(timerFunction, 1000);
-    startGame();
-  });
+  startGame();
+});
