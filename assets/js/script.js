@@ -67,11 +67,11 @@ const initialInput = document.getElementById('initial-input')
 
 const initialBtn = document.getElementById('initial-btn')
 
-
+let intervalId;
 
 startBtn.addEventListener("click", function () {
 //   startTimer();
-  setInterval(timerFunction, 1000);
+intervalId = setInterval(timerFunction, 1000);
   startGame();
 });
 
@@ -129,7 +129,7 @@ function timerFunction() {
     timer.innerText = time--;
   } else if (time == 0) {
     endGame();
-    clearInterval(timerFunction)
+    clearInterval(intervalId)
   }
   timer.innerText = time;
 
@@ -153,10 +153,10 @@ function correctOrNot(correct) {
   }
 };
 
-//should stop timer and change the screen to an initials input.
-//timer is not stopping once end game is started.
+// stops timer and change the screen to an initials input.
+
 function endGame() {
-    clearInterval(timerFunction);
+    clearInterval(intervalId);
     questionDiv.classList.add("hidden");
     initialDiv.classList.remove("hidden");
   
@@ -168,9 +168,6 @@ initialBtn.addEventListener('click', function(){
     const playerInitial = {
         initial: initialInput.value,
         score: time
-
-
-
     }
     highScoreList.push(playerInitial)
     localStorage.setItem('highscores',JSON.stringify(highScoreList))
