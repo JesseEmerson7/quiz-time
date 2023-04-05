@@ -88,7 +88,6 @@ let intervalId;
 function startGame() {
   startQuizDiv.classList.add("hidden");
   questionDiv.classList.remove("hidden");
-  //    firstQuestion();
 
   //First question is put on screen in divs
   questionBox.innerText = questions[qIndex].q;
@@ -106,7 +105,7 @@ questionDiv.addEventListener("click", function (e) {
   let correct;
 
   //if wright Text of the questions are updated to next question and value is sent to display correct or
-  //wrong
+  //wrong and sound effects will play
 
   if (e.target.innerText == questions[qIndex].a) {
     let correct = true;
@@ -131,12 +130,12 @@ questionDiv.addEventListener("click", function (e) {
   }
 });
 
-//Timer is set to got down by 1 every second and if the last question is answered time stops. or if time hits 0.
+//Timer is set to got down by 1 every second and if the last question is answered time stops. or if time hits 0. sound file will play if timer hits 0
 
 function timerFunction() {
   if (time > 0) {
     timer.innerText = time--;
-  } else if (time == 0) {
+  } else if (time == 0 || time < 0) {
     endGame();
     audioOutOfTime.play();
     clearInterval(intervalId);

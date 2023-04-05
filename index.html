@@ -8,13 +8,16 @@
     <title>Quiz Time!</title>
   </head>
   <body>
+    <!-- top bar with link to scores page and the timer box -->
     <header id="top-box">
       <div id="highscore">
         <a class="hover" href="./highscore.html">View High Scores</a>
       </div>
+      <!-- your score text will pop up when quiz is over -->
       <div class="hidden" id="your-score"><p>Your Score! >>></p></div>
       <div id="timer"><p>Time</p></div>
     </header>
+    <!-- question box where questions and answers will be presented once start is pushed -->
     <main id="main-content">
       <div id="question-div" class="hidden">
         <div id="question">This is Question 1</div>
@@ -24,6 +27,7 @@
         <button class="selection" id="answer-4">answer 4</button>
         <div id="right-wrong" class="hidden">correct!</div>
       </div>
+      <!-- main page with instructions and button to start -->
       <div id="start-quiz">
         <h1>Coding Quiz</h1>
         <p>Test your knowledge about JavaScript!</p>
@@ -31,6 +35,7 @@
         <p>Try and set a high score in best time!</p>
         <button type="button" id="start-btn">Start Quiz!</button>
       </div>
+      <!-- end screen to enter initials -->
       <div id="initial-div" class="hidden">
         <h2>Nice job! Please enter your initials for the score list.</h2>
         <input
@@ -40,6 +45,7 @@
         />
         <button id="initial-btn">Submit</button>
       </div>
+      <!-- audio files hidden and played when right, wrong, and time runs out  -->
       <div class="hidden">
         <audio
           id="audio-wrong"
