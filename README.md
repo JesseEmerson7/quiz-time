@@ -14,7 +14,7 @@ Once on the main page the user is presented with a start button and instructions
 
 ## view <a href="">Live page!</a>
 
- <img src="./assets/images/Screenshot 2023-04-03 230745.png">
+ <img src="./assets/images/Screenshot 2023-04-04 203001.png">
 
 ## License
 
