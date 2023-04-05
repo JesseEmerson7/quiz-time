@@ -179,7 +179,7 @@ initialBtn.addEventListener("click", function () {
   };
   highScoreList.push(playerInitial);
   localStorage.setItem("highscores", JSON.stringify(highScoreList));
-  window.location.href = ""https:"//jesseemerson7.github.io/quiz-time/highscore.html";
+  window.location.href = "https://jesseemerson7.github.io/quiz-time/highscore.html";
 });
 //start button for game and timer at an interval of 1 second count down
 startBtn.addEventListener("click", function () {
